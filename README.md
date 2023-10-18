@@ -143,6 +143,13 @@ sudo apt build-dep linux
 
 <br/>
 
+### 自己写了两段简单的后台编译脚本  ###
+使用方法 Wget下载到内核目录运行
+初衷 防止ssh远程连接断开 只要提供商不断电就可一直在后台运行编译 直至编译完成
+```
+nohup bash build.sh &
+```
+
 ***CentOS***   
 make rpm-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
 
