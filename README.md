@@ -39,7 +39,7 @@ net.core.default_qdisc = fq
 
 ### 1) 在此存储库上获取转换补丁, 使用git或直接下载
 ```
-git clone 
+git clone https://github.com/linke131/bbrplus-6.x_stable.git
 ```
 
 <br/>
@@ -69,6 +69,10 @@ something like
 ```
 cp ../convert_official_linux-6.4.x_src_to_bbrplus.patch .
 ```
+或
+```
+cp /root/bbrplus-6.x_stable/convert_official_linux-6.5.x_src_to_bbrplus.patch /root/linux-6.5.7
+```
 
 <br/>
 <br/>
@@ -76,10 +80,6 @@ cp ../convert_official_linux-6.4.x_src_to_bbrplus.patch .
 ### 5) 进行补丁工作
 ```
 patch -p1 < convert_official_linux-6.5.x_src_to_bbrplus.patch
-```
-或
-```
-patch -p1 < ../convert_official_linux-6.5.x_src_to_bbrplus.patch
 ```
 
 <br/>
