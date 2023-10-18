@@ -29,46 +29,46 @@ net.core.default_qdisc = fq
 <br/>
 <br/>
 
-## patch & build bbrplus kernel youself
-(or you can use releases compiled by me in "Releases" section)   
+## 自己修补并构建 bbrplus 内核
+(或者你可以使用我在“Releases”部分编译的版本)   
 <br/>
-***(build requirement to GCC is >= 4.9, so GCC upgrade is needed if use CentOS 7.x as builder)*** 
+***(GCC的构建要求> = 4.9, 因此如果使用CentOS 7.x作为构建器, 则需要GCC升级)*** 
 <br/>
 
-### 1) get convert patch on this repository, use git or direct download
+### 1) 在此存储库上获取转换补丁, 使用git或直接下载
         (e.g., convert_official_linux-6.4.x_src_to_bbrplus.patch)
 
 <br/>
 <br/>
 
-### 2) download officaial linux kernel
+### 2) 下载官方linux内核, X代表你想下载的版本
         say 6.4.12       
-            wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.4.12.tar.xz
+            wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.7.tar.xz
 
 <br/>
 <br/>
 
-### 3) extract the tarball & cd extracted directory
+### 3) 解压 tarball & cd 解压目录
         tar xvf linux-6.4.12.tar.xz && cd linux-6.4.12
 
 <br/>
 <br/>
 
-### 4) copy convert patch to extracted kernel directory
+### 4) 将转换补丁复制到解压后的内核目录
         something like
             cp ../convert_official_linux-6.4.x_src_to_bbrplus.patch .
 
 <br/>
 <br/>
 
-### 5) do the patch job
+### 5) 进行补丁工作
         patch -p1 < convert_official_linux-6.4.x_src_to_bbrplus.patch
 
 <br/>
 <br/>
 
-(if no error or failed on previous step)
-### 6) install dependencies for building kernels
+(如果上一步没有错误或失败)
+### 6) 安装构建内核的依赖项
 
 <br/>
 
@@ -78,7 +78,7 @@ sudo yum install ncurses-devel bc gcc gcc-c++ ncurses ncurses-devel cmake elfuti
 
 <br/>
 
-press "y" key when asked
+输入 "y" 回车
 
 <br/>
 
@@ -88,27 +88,27 @@ sudo apt build-dep linux
 
 <br/>
 
-press "y" key when asked
+输入 "y" 回车
 
 <br/>
 <br/>
 
-### 7) config build parameters based on current kernel settings
+### 7) 根据当前内核设置配置构建参数
         make oldconfig
 
 <br/>
 
-***(Note: If using CentOS 7.x with Xen Virtualization, ya have to set CONFIG_XEN_BLKDEV_FRONTEND=y, otherwise VMs won't boot.)***
+***(注意：如果使用带有 Xen 虚拟化的 CentOS 7.x，则必须设置 CONFIG_XEN_BLKDEV_FRONTEND=y，否则虚拟机将无法启动.)***
 
 <br/>
 
-press Enter key when asked (if dont know what is what)
+当询问时按 Enter 键（如果不知道是什么）
 
 
 <br/>
 <br/>
 
-### 8) disable debug info & module signing
+### 8) 禁用调试信息和模块签名
         scripts/config --disable SECURITY_LOCKDOWN_LSM
         scripts/config --disable DEBUG_INFO
         scripts/config --disable MODULE_SIG
@@ -117,7 +117,7 @@ press Enter key when asked (if dont know what is what)
 <br/>
 <br/>
 
-### 9) build kernel
+### 9) 构建 kernel
 
 <br/>
 
@@ -131,23 +131,23 @@ make deb-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
 
 <br/>
 
-if anything goes wrong check the "build.log" file
+如果出现任何问题, 请检查“build.log”文件
 
 <br/>
 <br/>
 
-(if not failed on previous step)
-### 10) collect kernel package files, do test on some other Linux machine
+(如果上一步没有失败)
+### 10) 收集内核包文件, 在其他Linux机器上进行测试
 
 <br/>
 
-***CentOS files***   
+***CentOS 文件***   
 located in  
 /"user home dir"/rpmbuild/RPMS/x86_64/
 
 <br/>
 
-***Debian/Ubuntu files***  
+***Debian/Ubuntu 文件***  
 located in  
 parent directory  
 
