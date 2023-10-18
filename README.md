@@ -19,12 +19,12 @@ https://github.com/cx9208/bbrplus
 net.ipv4.tcp_congestion_control = bbrplus
 net.core.default_qdisc = fq
 ```
-or
+或
 ```sh
 net.ipv4.tcp_congestion_control = bbr
 net.core.default_qdisc = fq
 ```
-in the `/etc/sysctl.conf` file. &nbsp;&nbsp; ( `fq` is the only recommended packet scheduler, do not use `fq_codel` `fq_pie` `cake` etc ) 
+在文件中/etc/sysctl.conf. &nbsp;&nbsp; ( fq是唯一推荐的数据包调度程序 请勿使用fq_codel fq_pie cake等 ) 
 <br/>
 <br/>
 <br/>
