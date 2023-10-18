@@ -80,17 +80,9 @@ sudo yum -y install ncurses-devel bc gcc gcc-c++ ncurses ncurses-devel cmake elf
 
 <br/>
 
-输入 "y" 回车
-
-<br/>
-
 ***Debian/Ubuntu***  
-sudo apt install build-essential libncurses5-dev  
+sudo apt install -y build-essential libncurses5-dev  
 sudo apt build-dep linux
-
-<br/>
-
-输入 "y" 回车
 
 <br/>
 <br/>
