@@ -43,15 +43,15 @@ net.core.default_qdisc = fq
 <br/>
 <br/>
 
-### 2) 下载官方linux内核, X代表你想下载的版本
-        say 6.4.12       
+### 2) 下载官方linux内核, 6.5.7可自定义为你想下载的版本
+        say 6.5.7       
             wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.7.tar.xz
 
 <br/>
 <br/>
 
 ### 3) 解压 tarball & cd 解压目录
-        tar xvf linux-6.4.12.tar.xz && cd linux-6.4.12
+        tar xvf linux-6.5.7.tar.xz && cd linux-6.5.7
 
 <br/>
 <br/>
