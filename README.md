@@ -39,7 +39,7 @@ net.core.default_qdisc = fq
 
 ### 1) 在此存储库上获取转换补丁, 使用git或直接下载
 ```
-(e.g., convert_official_linux-6.4.x_src_to_bbrplus.patch)
+git clone 
 ```
 
 <br/>
