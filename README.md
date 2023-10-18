@@ -91,26 +91,37 @@ patch -p1 < convert_official_linux-6.5.x_src_to_bbrplus.patch
 <br/>
 
 ***CentOS***  
-sudo yum groupinstall -y "Development Tools"  
+```
+sudo yum groupinstall -y "Development Tools"
+```
+
+```
 sudo yum -y install ncurses-devel bc gcc gcc-c++ ncurses ncurses-devel cmake elfutils-libelf-devel openssl-devel rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed xmlto audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel newt-devel python-devel zlib-devel
+```
 
 <br/>
 
 ***CentOS Stream 8所需编译依赖***
-
+```
 yum inatall -y ncurses-devel gcc-c++ make openssl-devel bison flex elfutils-libelf-devel
+```
 
 <br/>
 
 ***CentOS Stream 9所需编译依赖***
-
+```
 yum inatall -y make gcc ncurses-devel flex bison openssl-devel bc elfutils-libelf-devel perl dwarves
+```
 
 <br/>
-
+```
 ***Debian/Ubuntu***  
-sudo apt install -y build-essential libncurses5-dev  
+sudo apt install -y build-essential libncurses5-dev
+```
+
+```  
 sudo apt build-dep linux
+```
 
 <br/>
 <br/>
