@@ -38,14 +38,15 @@ net.core.default_qdisc = fq
 <br/>
 
 ### 1) 在此存储库上获取转换补丁, 使用git或直接下载
-        (e.g., convert_official_linux-6.4.x_src_to_bbrplus.patch)
+```(e.g., convert_official_linux-6.4.x_src_to_bbrplus.patch)
+```
 
 <br/>
 <br/>
 
 ### 2) 下载官方linux内核, 6.5.7可自定义为你想下载的版本
-        say 6.5.7       
-            wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.7.tar.xz
+```wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.7.tar.xz
+```
 
 <br/>
 <br/>
