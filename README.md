@@ -114,8 +114,8 @@ yum inatall -y make gcc ncurses-devel flex bison openssl-devel bc elfutils-libel
 ```
 
 <br/>
-```
 ***Debian/Ubuntu***  
+```
 sudo apt install -y build-essential libncurses5-dev
 ```
 
