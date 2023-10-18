@@ -11,10 +11,10 @@ https://github.com/cx9208/bbrplus
 <br/>
 <br/> 
 
-## some improvements as Aug-2023
+## 截至 2023 年 8 月 进行了一些改进
 
-###  i)   merged official tcp_bbr patches between 2018-2023 into bbrplus  
-###  ii)  keep official tcp_bbr module, so may use either  
+###  i) 将 2018-2023 年间的官方 tcp_bbr 补丁合并到 bbrplus 中  
+###  ii) 保留官方 tcp_bbr 模块，因此可以使用其中之一  
 ```sh
 net.ipv4.tcp_congestion_control = bbrplus
 net.core.default_qdisc = fq
