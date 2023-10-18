@@ -167,6 +167,7 @@ scripts/config --disable MODULE_SIG
 ```
 nohup bash build.sh &
 ```
+此编译脚本运行后会在同级目录下生成一个名为nohup.out的一个文件 他是一个整个编译过程的一个日志文件 他将记录所有编译记录及错误记录
 
 ***CentOS***
 ```
