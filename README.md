@@ -114,6 +114,7 @@ yum inatall -y make gcc ncurses-devel flex bison openssl-devel bc elfutils-libel
 ```
 
 <br/>
+
 ***Debian/Ubuntu***  
 ```
 sudo apt install -y build-essential libncurses5-dev
@@ -142,9 +143,15 @@ sudo apt build-dep linux
 <br/>
 
 ### 8) 禁用调试信息和模块签名
-        scripts/config --disable SECURITY_LOCKDOWN_LSM
-        scripts/config --disable DEBUG_INFO
-        scripts/config --disable MODULE_SIG
+```
+scripts/config --disable SECURITY_LOCKDOWN_LSM
+```
+```
+scripts/config --disable DEBUG_INFO
+```
+```
+scripts/config --disable MODULE_SIG
+```
 
 
 <br/>
@@ -161,13 +168,17 @@ sudo apt build-dep linux
 nohup bash build.sh &
 ```
 
-***CentOS***   
+***CentOS***
+```
 make rpm-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
+```
 
 <br/>
 
-***Debian/Ubuntu***  
+***Debian/Ubuntu***
+```
 make deb-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
+```
 
 <br/>
 
