@@ -74,7 +74,9 @@ cp ../convert_official_linux-6.4.x_src_to_bbrplus.patch .
 <br/>
 
 ### 5) 进行补丁工作
-        patch -p1 < convert_official_linux-6.5.x_src_to_bbrplus.patch
+```
+patch -p1 < convert_official_linux-6.5.x_src_to_bbrplus.patch
+```
 
 <br/>
 <br/>
