@@ -103,7 +103,7 @@ sudo yum -y install ncurses-devel bc gcc gcc-c++ ncurses ncurses-devel cmake elf
 
 ***CentOS Stream 8所需编译依赖***
 ```
-yum install -y ncurses-devel gcc-c++ make openssl-devel bison flex elfutils-libelf-devel rsync bc
+dnf install -y ncurses-devel gcc-c++ make openssl-devel bison flex elfutils-libelf-devel rsync bc git wget patch rpm-build
 ```
 
 <br/>
