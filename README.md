@@ -45,7 +45,7 @@ git clone https://github.com/linke131/bbrplus-6.x_stable.git
 <br/>
 <br/>
 
-### 2) 下载官方linux内核, 6.5.7可自定义为你想下载的版本
+### 2) 下载官方linux内核, 6.5.7可自定义为你想编译的版本
 ```
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.7.tar.xz
 ```
