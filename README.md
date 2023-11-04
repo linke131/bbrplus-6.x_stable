@@ -173,6 +173,8 @@ nohup bash build.sh &
 nohup bash kernel.sh &
 ```
 此脚本测试系统CentOS Stream 8
+
+
 此编译脚本运行后会在同级目录下生成一个名为nohup.out的一个文件 他是一个整个编译过程的一个日志文件 他将记录所有编译记录及错误记录
 
 一般报错位于最后边 拉到最后
