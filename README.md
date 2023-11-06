@@ -217,6 +217,23 @@ make deb-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
 
 <br/>
 
+# 安装内核并启用内核
+```
+dnf install -y kernel-6.6.0_bbrplus-3.*.rpm
+```
+
+# 查看系统已安装所有内核
+```
+grubby --info=ALL | grep ^kernel
+```
+一般最新安装的内核位于第一个
+
+```
+grub2-set-default "vmlinuz-6.6.0-bbrplus"
+```
+grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
 ***CentOS 文件***   
 located in  
 /"user home dir"/rpmbuild/RPMS/x86_64/
