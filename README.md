@@ -178,6 +178,8 @@ nohup bash kernel.sh &
 nohup bash kernel-V6.6.sh &
 ```
 kernel-V6.6.sh适用于编译6.6以上内核
+
+
 此脚本测试系统CentOS Stream 8
 
 
