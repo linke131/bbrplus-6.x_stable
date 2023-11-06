@@ -217,12 +217,12 @@ make deb-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
 
 <br/>
 
-# 安装内核并启用内核
+# 安装内核
 ```
 dnf install -y kernel-6.6.0_bbrplus-3.*.rpm
 ```
 
-# 查看系统已安装所有内核
+# 查看系统已安装所有内核并设置为默认启动内核
 ```
 grubby --info=ALL | grep ^kernel
 ```
@@ -231,8 +231,22 @@ grubby --info=ALL | grep ^kernel
 ```
 grub2-set-default "vmlinuz-6.6.0-bbrplus"
 ```
+
+```
 grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
+
+grub设置完后重启系统即可
+```
+reboot
+```
+
+重启系统后使用以下命令确认是否设置成功
+```
+uname -r
+```
+如反馈X.X.X-bbrplus则为成功
+
 
 ***CentOS 文件***   
 located in  
