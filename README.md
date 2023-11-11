@@ -3,6 +3,8 @@ Linux BBRplus Kernel 6.x Stable（非LTS）
 
 从BBRplus 4.14移植 （注意它并不基于6.x版本的BBR，而只是简单移植了4.14版本的BBRplus）
 
+今生不在编译debian And ubuntu [debian And ubuntu错误](https://github.com/linke131/bbrplus-6.x_stable/blob/main/build-Error.md).
+
 <br/>
 <br/>
 <br/>
@@ -34,7 +36,7 @@ net.core.default_qdisc = fq
 ## 自己修补并构建 bbrplus 内核
 (或者你可以使用我在“Releases”部分编译的版本)   
 <br/>
-***(GCC的构建要求> = 4.9, 因此如果使用CentOS 7.x作为构建器, 则需要GCC升级)*** 
+***(GCC的构建要求> = 5.1, 因此如果使用CentOS 7.x作为构建器, 则需要GCC升级)*** 
 <br/>
 
 ### 1) 在此存储库上获取转换补丁, 使用git或直接下载
